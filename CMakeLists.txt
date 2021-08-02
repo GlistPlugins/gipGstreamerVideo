@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10.2)
 
 ##### PLUGIN NAME #####
-set(pluginname gipFFmpegVideo)
+set(pluginname gipGstreamerVideo)
 
 
 ##### PLUGIN PATHS #####
@@ -11,14 +11,16 @@ set(PREBUILT_DIR ${PLUGIN_DIR}/prebuilts)
 
 ##### PLUGIN SOURCES #####
 list(APPEND PLUGIN_SRCS
-			${PLUGIN_DIR}/src/gipFFmpegVideo.cpp
-			${PLUGIN_DIR}/src/gipFFmpegUtils.cpp
+			${PLUGIN_DIR}/src/gipGstreamerVideo.cpp
 )
 
 
 ##### PLUGIN HEADERS #####
 list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
+			${PREBUILT_DIR}/include
+			${PREBUILT_DIR}/include/gstreamer-1.0
+			${PREBUILT_DIR}/include/glib-2.0
 )
 
 
@@ -29,7 +31,6 @@ if(WIN32)
 				${PREBUILT_DIR}/bin
 	)
 	
-	#set(PLUGIN_LIBDIRS ${PREBUILT_DIR}/lib/win32)
 	list(APPEND PLUGIN_LIBDIRS
 				${PREBUILT_DIR}/lib/win32
 	)
@@ -40,26 +41,19 @@ elseif(APPLE)
 endif(WIN32)
 
 
-##### PLUGIN DEPENDENCY LINKING (IF ANY) #####					
+##### PLUGIN DEPENDENCY LINKING (IF ANY) #####
 if(WIN32)
 	list(APPEND PLUGIN_LINKLIBS
-				avcodec
-				avformat
-				avfilter
-				avdevice
-				avutil
-				swscale
+				gstreamer-1.0
+				glib-2.0
+				gobject-2.0
 	)
 elseif(LINUX)
 	list(APPEND PLUGIN_LINKLIBS
-				avcodec
-				avformat
-				avfilter
-				avdevice
-				avutil
-				swscale
+				#Lib names
 	)
 elseif(APPLE)
 	list(APPEND PLUGIN_LINKLIBS
+				#Lib names
 	)
 endif(WIN32)
