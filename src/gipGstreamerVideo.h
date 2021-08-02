@@ -9,6 +9,9 @@
 #ifndef MEDIA_GVIDEO_H_
 #define MEDIA_GVIDEO_H_
 
+#include "gObject.h"
+#include "gBasePlugin.h"
+#include "gst/gst.h"
 
 #if defined(WIN32)
 #include <windef.h>
@@ -18,10 +21,6 @@
 #elif defined(APPLE)
 #define GLFW_EXPOSE_NATIVE_COCOA
 #endif
-#include "GLFW/glfw3.h"
-
-#include "gObject.h"
-#include "gst/gst.h"
 
 class gipGstreamerVideo : public gObject{
 public:

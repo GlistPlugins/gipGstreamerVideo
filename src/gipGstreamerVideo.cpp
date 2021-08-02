@@ -9,10 +9,7 @@
 
 gipGstreamerVideo::gipGstreamerVideo() {
 	if(!gst_is_initialized()) {
-		gst_init(nullptr, nullptr);
-		g_print("init");
-	}else{
-		g_print("already init");
+		gst_init(nullptr,nullptr);
 	}
 
 }

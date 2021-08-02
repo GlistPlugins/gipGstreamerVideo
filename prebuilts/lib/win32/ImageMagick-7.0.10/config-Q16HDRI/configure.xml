@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+  <!ELEMENT configuremap (configure)+>
+  <!ATTLIST configuremap xmlns CDATA #FIXED ''>
+  <!ELEMENT configure EMPTY>
+  <!ATTLIST configure xmlns CDATA #FIXED '' name NMTOKEN #REQUIRED
+    value CDATA #REQUIRED>
+]>
+<!--
+  ImageMagick build configuration.
+-->
+<configuremap>
+  <configure name="CC" value="gcc"/>
+  <configure name="CFLAGS" value="-I/mingw64/include/libxml2  -I/mingw64/include  -I/mingw64/include  -I/mingw64/include -I/mingw64/include/cairo -I/mingw64/include/lzo -I/mingw64/include/libpng16 -I/mingw64/include/freetype2 -I/mingw64/include/harfbuzz -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -mms-bitfields -I/mingw64/include/pixman-1  -I/mingw64/include/librsvg-2.0 -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -I/mingw64/include -mms-bitfields -I/mingw64/include/gdk-pixbuf-2.0 -I/mingw64/include/libpng16 -mms-bitfields -pthread -mms-bitfields -I/mingw64/include/cairo -I/mingw64/include/lzo -I/mingw64/include/freetype2 -I/mingw64/include/harfbuzz -mms-bitfields -I/mingw64/include/pixman-1  -I/mingw64/include/libraw -I/mingw64/include  -I/mingw64/include/libpng16 -I/mingw64/include   -I/mingw64/include/pango-1.0 -I/mingw64/include -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -I/mingw64/include/harfbuzz -I/mingw64/include/freetype2 -I/mingw64/include/libpng16 -mms-bitfields -I/mingw64/include/fribidi -I/mingw64/include/cairo -I/mingw64/include/lzo -I/mingw64/include/pixman-1 -mms-bitfields -mms-bitfields -mms-bitfields -mms-bitfields -pthread -mms-bitfields -mms-bitfields  -I/mingw64/include/OpenEXR -I/mingw64/include  -I/mingw64/include  -I/mingw64/include/lqr-1 -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -mms-bitfields -I/mingw64/include  -I/mingw64/include/openjpeg-2.3  -I/mingw64/include  -I/mingw64/include/libheif -I/mingw64/include/libde265 -I/mingw64/include -I/mingw64/include/rav1e  -I/mingw64/include/graphviz  -I/mingw64/include -I/mingw64/include/freetype2 -I/mingw64/include/libpng16 -I/mingw64/include/harfbuzz -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -mms-bitfields -I/mingw64/include/fribidi  -I/mingw64/include/freetype2 -I/mingw64/include -I/mingw64/include/libpng16 -I/mingw64/include/harfbuzz -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -mms-bitfields  -I/mingw64/include -I/mingw64/include/freetype2 -I/mingw64/include/libpng16 -I/mingw64/include/harfbuzz -I/mingw64/include/glib-2.0 -I/mingw64/lib/glib-2.0/include -mms-bitfields   -I/mingw64/include   -I/mingw64/include   -fopenmp -Wall -march=x86-64 -mtune=generic -O2 -pipe -mtune=broadwell -fexceptions -pthread -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/mingw64/lib/ImageMagick-7.0.10/modules-Q16HDRI/coders"/>
+  <configure name="CONFIGURE_PATH" value="/mingw64/etc/ImageMagick-7/"/>
+  <configure name="CONFIGURE" value="../ImageMagick-7.0.10-11/configure  '--prefix=/mingw64' '--build=x86_64-w64-mingw32' '--host=x86_64-w64-mingw32' '--disable-deprecated' '--enable-legacy-support' '--enable-hdri' '--with-djvu' '--with-fftw' '--with-gslib' '--with-gvc' '--with-flif' '--with-lcms' '--with-lqr' '--with-modules' '--with-openexr' '--with-openjp2' '--with-rsvg' '--with-webp' '--with-wmf' '--with-xml' '--without-autotrace' '--without-dps' '--without-fpx' '--with-jbig' '--without-perl' '--without-x' '--with-raqm' '--with-magick-plus-plus' '--with-windows-font-dir=c:/Windows/fonts' '--with-gs-font-dir=/mingw64/share/fonts/gsfonts' '--with-dejavu-font-dir=/mingw64/share/fonts/TTF' 'CFLAGS=-march=x86-64 -mtune=generic -O2 -pipe' 'CPPFLAGS=-D__USE_MINGW_ANSI_STDIO=1' 'LDFLAGS=-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high' 'build_alias=x86_64-w64-mingw32' 'host_alias=x86_64-w64-mingw32' 'CC=gcc' 'CXX=g++' 'CXXFLAGS=-march=x86-64 -mtune=generic -O2 -pipe' 'PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2020 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/mingw64/include/ImageMagick-7 -D_DLL -D_MT"/>
+  <configure name="CXXFLAGS" value="-march=x86-64 -mtune=generic -O2 -pipe -pthread"/>
+  <configure name="CXX" value="g++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="bzlib djvu mpeg fftw flif fontconfig freetype gslib heic jbig jng jpeg lcms lqr lzma openexr openjp2 pango png ps raqm raw rsvg tiff webp wmf xml zlib zstd"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="'CC=gcc' 'CFLAGS=-march=x86-64 -mtune=generic -O2 -pipe' 'CPPFLAGS=-D__USE_MINGW_ANSI_STDIO=1' 'CXX=g++' 'LDFLAGS=-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high'  --disable-deprecated  --with-quantum-depth=16  --with-jemalloc=no  --with-umem=no  --with-autotrace=no  --with-dps=no  --with-dejavu-font-dir=/mingw64/share/fonts/TTF  --with-fpx=no  --with-fontpath=  --with-gs-font-dir=/mingw64/share/fonts/gsfonts  --with-windows-font-dir=c:/Windows/fonts  --with-perl=no "/>
+  <configure name="DOCUMENTATION_PATH" value="/mingw64/share/doc/ImageMagick-7"/>
+  <configure name="EXEC-PREFIX" value="/mingw64"/>
+  <configure name="EXECUTABLE_PATH" value="/mingw64/bin"/>
+  <configure name="FEATURES" value="HDRI Cipher OpenMP Modules"/>
+  <configure name="FILTER_PATH" value="/mingw64/lib/ImageMagick-7.0.10/modules-Q16HDRI/filters"/>
+  <configure name="GIT_REVISION" value="17231" />
+  <configure name="HOST" value="x86_64-w64-mingw32"/>
+  <configure name="INCLUDE_PATH" value="/mingw64/include/ImageMagick-7"/>
+  <configure name="LDFLAGS" value="-L/mingw64/lib -pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high"/>
+  <configure name="LIBRARY_PATH" value="/mingw64/lib/ImageMagick-7.0.10"/>
+  <configure name="LIBS" value=" -L/mingw64/lib -llcms2  -L/mingw64/lib -lfreetype  -L/mingw64/lib -lraqm -lfreetype  -llqr-1 -L/mingw64/lib -lglib-2.0 -lintl  -L/mingw64/lib -lfftw3  -L/mingw64/lib -lxml2  -lflif -L/mingw64/lib -lfontconfig -lfreetype      -L/mingw64/lib -llzma  -lbz2 -L/mingw64/lib -lz   -lltdl -lgdi32 -lws2_32 -lm    -lpthread  -lgomp"/>
+  <configure name="LIB_VERSION_NUMBER" value="7,0,10,11"/>
+  <configure name="LIB_VERSION" value="0x70A"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -D_DLL -D_MT"/>
+  <configure name="PREFIX" value="/mingw64"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2021-05-20"/>
+  <configure name="SHAREARCH_PATH" value="/mingw64/lib/ImageMagick-7.0.10/config-Q16HDRI"/>
+  <configure name="SHARE_PATH" value="/mingw64/share/ImageMagick-7"/>
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="mingw32"/>
+  <configure name="TARGET_VENDOR" value="w64"/>
+  <configure name="VERSION" value="7.0.10"/>
+  <configure name="WEBSITE" value="https://imagemagick.org"/>
+</configuremap>

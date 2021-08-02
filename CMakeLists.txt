@@ -34,6 +34,7 @@ if(WIN32)
 	list(APPEND PLUGIN_LIBDIRS
 				${PREBUILT_DIR}/lib/win32
 	)
+	
 elseif(LINUX)
 	#Linux libs here
 elseif(APPLE)
