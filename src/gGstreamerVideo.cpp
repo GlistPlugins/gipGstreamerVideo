@@ -5,7 +5,7 @@
  *      Author: kayra
  */
 
-#include "gipEmpty.h"
+#include "gGstreamerVideo.h"
 
 gipEmpty::gipEmpty() {
 	// TODO Auto-generated constructor stub

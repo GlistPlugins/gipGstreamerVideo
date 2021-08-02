@@ -5,8 +5,8 @@
  *      Author: kayra
  */
 
-#ifndef SRC_GIPEMPTY_H_
-#define SRC_GIPEMPTY_H_
+#ifndef SRC_GGSTREAMERVIDEO_H_
+#define SRC_GGSTREAMERVIDEO_H_
 
 #include "gBasePlugin.h"
 
@@ -16,4 +16,4 @@ public:
 	virtual ~gipEmpty();
 };
 
-#endif /* SRC_GIPEMPTY_H_ */
+#endif /* SRC_GGSTREAMERVIDEO_H_ */
